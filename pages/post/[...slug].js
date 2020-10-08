@@ -1,24 +1,18 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-
-// const DynamicComponentWithNoSSR = dynamic(
-//   () => import('../components'),
-//   { ssr: false }
-// )
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Slug Testing Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <DynamicComponentWithNoSSR /> */}
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Learn <a href="https://nextjs.org">Next.js!</a>
+          Slug Testing Demo
         </h1>
 
         <p className={styles.description}>
@@ -46,23 +40,15 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/post/post-one/abs">
-            <a className={styles.card}>
-              <h3>Slug Testing</h3>
-              <p>
-                Go to Post Slug testing
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className={styles.card}
+          >
+            <h3>Deploy &rarr;</h3>
+            <p>
+              Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-            </a>
-          </Link>
-
-          <Link href="/settings/mahi">
-            <a className={styles.card}>
-              <h3>User Testing</h3>
-              <p>
-                Go to User testing
-            </p>
-            </a>
-          </Link>
+          </a>
         </div>
       </main>
 
